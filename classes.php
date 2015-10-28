@@ -13,12 +13,18 @@
 			public $name;
 			public $age;
 			public $weight;
+            private $breed;
 
 			// the object's constructor
 			public function __construct($_name, $_age, $_weight){
 				$this->name   = $_name;
 				$this->age    = $_age;
 				$this->weight = $_weight;
+                
+                if ($this->weight > 25){
+                    
+                    $this->breed = "Mountain Lion";
+                }
 			}
 
 			public function feedCat($_food){
@@ -40,11 +46,56 @@
 		}
 
 
+
+    // CLASS MINE OF DOG THING //
+
+class Dog{
+			// object properties
+            public $name;
+			public $age;
+			public $weight;
+            public $happiness;
+            public $playtime;
+            private $breed;
+    
+            public function __construct($_name, $_age, $_weight, $_happiness, $_playtime){
+				$this->name   = $_name;
+				$this->age    = $_age;
+				$this->weight = $_weight;
+                $this->happiness = $_happiness;
+                $this->playtime = $_playtime;
+                
+                
+                if ($this->weight > 205){
+                    
+                    $this->breed = "Malamute";
+                }
+			}
+    
+        public function playDog($_play){
+				if ($_happiness > $_play){
+                    echo $this->name." is happy!";
+				
+				}
+			}
+			
+		}
+
+// dogs //
+
+        $dog1 = new Dog("Babu", 35, 100, 100, 60);
+
+// cats//
+
 		$cat1 = new Cat("Little Buddy", 2, 8);
 		$cat2 = new Cat("Sneaky Pete", 0, 2);
+        $cat3 = new Cat("PuppyCat", 100, 50);
+        $cat4 = new Cat("Usagi", 3, 7);
 
 		$cat1->howOld();
 		$cat1->feedCat(6);
+            
+        $cat3->howOld();
 
 		echo $cat2->name;
 		echo "<br>";
