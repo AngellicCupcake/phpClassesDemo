@@ -75,6 +75,10 @@ class Dog{
         public function playDog($_play){
 				if ($_happiness > $_play){
                     echo $this->name." is happy!";
+                }
+            else{
+                echo "Play With Your Dog More!";
+                echo "<br>";
 				
 				}
 			}
@@ -84,6 +88,7 @@ class Dog{
 // dogs //
 
         $dog1 = new Dog("Babu", 35, 100, 100, 60);
+        $dog1->playDog(100);
 
 // cats//
 
